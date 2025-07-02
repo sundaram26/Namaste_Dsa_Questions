@@ -60,6 +60,25 @@ class LinkedList {
         this.size++;
     }
 
+    circular(index, val) {
+        if (index < 0 || index > this.size) return;
+        let newNode = new Node(val);
+        let circ = this.head;
+
+        for (let i = 0; i < index; i++) {
+            circ = circ.next;
+        }
+
+        let curr = this.head;
+        while (curr.next !== null) {
+            curr = curr.next;
+        }
+        curr.next = newNode;
+        newNode.next = circ;
+
+        this.size++;
+    }
+
     // Delete node at specific index
     deleteAtIndex(index) {
         if (index < 0 || index >= this.size) return;
@@ -89,25 +108,22 @@ class LinkedList {
 
     // Print the whole list
     print() {
-        let curr = this.head;
         const result = [];
-        while (curr) {
-            result.push(curr.val);
-            curr = curr.next;
-        }
-        console.log(result.join(" -> ") + " -> NULL");
-    }
+        const visited = new Set();
+        let current = this.head;
 
-    // // Convert list to array (for testing)
-    // toArray() {
-    //     let curr = this.head;
-    //     const result = [];
-    //     while (curr) {
-    //         result.push(curr.val);
-    //         curr = curr.next;
-    //     }
-    //     return result;
-    // }
+        while (current) {
+            if (visited.has(current)) {
+                result.push(`[Cycle detected at ${current.val}]`);
+                break;
+            }
+            result.push(current.val);
+            visited.add(current);
+            current = current.next;
+        }
+
+        return result.join(" -> ");
+    }
 }
 
 export default LinkedList;
