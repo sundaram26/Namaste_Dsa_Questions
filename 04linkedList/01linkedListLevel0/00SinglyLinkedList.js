@@ -106,6 +106,27 @@ class LinkedList {
         return curr.val;
     }
 
+    // Get node object at specific index (not just value)
+    getNodeAtIndex(index) {
+        if (index < 0 || index >= this.size) return null;
+
+        let curr = this.head;
+        for (let i = 0; i < index; i++) {
+            curr = curr.next;
+        }
+        return curr;
+    }
+
+    // Get tail node of the list
+    getTail() {
+        if (!this.head) return null;
+        let curr = this.head;
+        while (curr.next !== null) {
+            curr = curr.next;
+        }
+        return curr;
+    }
+
     // Print the whole list
     print() {
         const result = [];
