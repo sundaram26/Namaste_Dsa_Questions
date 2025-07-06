@@ -24,6 +24,26 @@ function removeElemFromEnd(head, val) {
     return sentinel.next;
 }
 
+function removeElemFromEnd2(head, val) {
+    let sentinel = new LinkedList();
+    sentinel.next = head;
+    let slow = sentinel;
+    let fast = sentinel;
+    let count = 0;
+    while (fast.next) {
+        if (count < val) {
+            fast = fast.next;
+            count++;
+        } else {
+            slow = slow.next;
+            fast = fast.next;
+        }
+    }
+    slow.next = slow.next.next;
+
+    return head;
+}
+
 const list = new LinkedList();
 list.addAtHead(1);
 list.addAtTail(2);
@@ -32,5 +52,7 @@ list.addAtTail(4);
 list.addAtTail(5);
 
 console.log("Original Linked List: ", list.print());
-removeElemFromEnd(list.head, 2);
+// removeElemFromEnd(list.head, 2);
+// console.log("New Linked List: ", list.print());
+removeElemFromEnd2(list.head, 2);
 console.log("New Linked List: ", list.print());
