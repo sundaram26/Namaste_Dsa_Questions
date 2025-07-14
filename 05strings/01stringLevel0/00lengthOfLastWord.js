@@ -22,7 +22,23 @@ function lengthOfLastWord2(string) {
     return count;
 }
 
+function lengthOfLastWord3(string) {
+    let i = string.length - 1;
+    let count = 0;
+
+    while (i >= 0) {
+        if (string[i] !== ' ') {
+            count++;
+        } else if (count > 0) {
+            break;
+        }
+        i--;
+    }
+
+    return count;
+}
 
 const str = "Hello World";
 console.log("Length of Last Word with built in function: ", lengthOfLastWord(str))
 console.log("Length of Last Word: ", lengthOfLastWord2(str))
+console.log("Length of Last Word: ", lengthOfLastWord3(str))
