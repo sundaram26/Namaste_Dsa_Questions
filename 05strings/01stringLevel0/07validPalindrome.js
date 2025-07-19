@@ -27,6 +27,24 @@ function validPalindromeI(string) {
     return false;
 }
 
-const str = "A man, a plan, a canal: Panama";
-// const str = " ";
-console.log(validPalindromeI(str));
+function validPalindromeII(string) {
+    let s = 0;
+    let e = string.length - 1;
+
+    while (s < e) {
+        if (!string[s].match(/[A-Za-z0-9]/)) s++;
+        if (!string[e].match(/[A-Za-z0-9]/)) e--;
+        if (string[s].toLowerCase() === string[e].toLowerCase()) {
+            s++;
+            e--;
+        } else {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+// const str = "A man, a plan, a canal: Panama";
+const str = "ab";
+console.log(validPalindromeII(str));
