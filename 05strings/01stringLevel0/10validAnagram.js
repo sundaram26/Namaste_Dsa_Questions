@@ -10,4 +10,4 @@ function isAnagram(s, t) {
 const s = "anagram"
 const t = "nagaram"
 
-console.log(s, t);
+console.log(isAnagram(s, t));
