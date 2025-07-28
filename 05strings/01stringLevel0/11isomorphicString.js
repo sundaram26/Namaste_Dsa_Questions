@@ -3,8 +3,7 @@
 //O/P:- true
 //Explaination:- e->a and g->d can make add from the egg by change one char one time
 
-function IsomorphicString(s, t) {
-    
+function IsomorphicString(s, t) { 
     const mapTtoS = {};
     const mapStoT = {};
 
