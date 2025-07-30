@@ -18,5 +18,25 @@ function groupAnagram(strs) {
 }
 
 
+function groupAnagram2(strs) {
+    const map = {};
+    for (let i = 0; i < strs.length; i++){
+        let alphaCount = Array(26).fill(0);
+        for (let j = 0; j < strs[i].length; j++){
+            let index = strs[i][j].charCodeAt() - 'a'.charCodeAt();
+            alphaCount[index]++;
+        } 
+        if (!map[alphaCount]) {
+            map[alphaCount] = [strs[i]];
+        } else {
+            map[alphaCount].push(strs[i]);
+        }
+    }
+
+    return Object.values(map);
+}
+
+
 const strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 console.log(groupAnagram(strs));
+console.log(groupAnagram2(strs));
