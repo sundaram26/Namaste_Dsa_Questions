@@ -26,6 +26,12 @@ function groupAnagram2(strs) {
             let index = strs[i][j].charCodeAt() - 'a'.charCodeAt();
             alphaCount[index]++;
         } 
+
+        let key = "";
+        for (let k = 0; k < 26; k++){
+            key = key + "#" + alphaCount[k];
+        }
+
         if (!map[alphaCount]) {
             map[alphaCount] = [strs[i]];
         } else {
