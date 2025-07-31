@@ -39,7 +39,7 @@ function groupAnagram2(strs) {
         }
     }
 
-    return Object.values(map);
+    return Object.values(map)
 }
 
 
