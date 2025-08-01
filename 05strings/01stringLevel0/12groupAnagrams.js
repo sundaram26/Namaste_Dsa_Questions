@@ -44,5 +44,5 @@ function groupAnagram2(strs) {
 
 
 const strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
-console.log(groupAnagram(strs));
+console.log(groupAnagram(strs))
 console.log(groupAnagram2(strs));
