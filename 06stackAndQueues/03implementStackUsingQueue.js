@@ -1,5 +1,8 @@
-//Leetcode 225. Implement Stack using Queues(two queue)
+//Leetcode 225. Implement Stack using Queues
 //https://leetcode.com/problems/implement-stack-using-queues/description/
+
+//Using Two queues:-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // let MyStack = function () {
 //     this.q1 = [];
@@ -21,8 +24,6 @@ class MyStack {
     }
 
     pop() {
-        console.log("This is q1: ", this.q1);
-        console.log("This is q2: ", this.q2);
         let n = this.q1.length;
         for (let i = 0; i < n - 1; i++){
             // const elem = this.q1.shift();
@@ -34,7 +35,6 @@ class MyStack {
         this.q2 = this.q1;
         this.q1 = temp;
         console.log("This is q1: ", this.q1);
-        console.log("This is q2: ", this.q2);
         return elem;
     }
 
@@ -74,3 +74,53 @@ console.log(s1.pop());
 console.log(s1.pop());
 console.log(s1.pop());
 console.log(s1.isEmpty());
+
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+//Using one queue:-
+class MyStackUsingOneQueue {
+    constructor() {
+        this.q1 = [];
+    }
+
+    push(x) {
+        this.q1.push(x);
+    }
+
+    pop() {
+        const n = this.q1.length;
+        for (let i = 0; i < n - 1; i++){
+            this.q1.push(this.q1.shift());
+        }
+        const elem = this.q1.shift();
+        console.log("this is q1: ", this.q1)
+        return elem;
+    }
+
+    top() {
+        const n = this.q1.length;
+        for (let i = 0; i < n - 1; i++){
+            this.q1.push(this.q1.shift());
+        }
+        const elem = this.q1.shift();
+        this.q1.push(elem);
+        return elem;
+    }
+
+    isEmpty() {
+        return this.q1.length === 0;
+    }
+}
+
+let s2 = new MyStackUsingOneQueue();
+
+s2.push(1);
+s2.push(2);
+s2.push(3);
+s2.push(4);
+console.log(s2.pop());
+console.log(s2.top());
+console.log(s2.isEmpty());
+console.log(s2.pop());
+console.log(s2.pop());
+console.log(s2.pop());
+console.log(s2.isEmpty());
