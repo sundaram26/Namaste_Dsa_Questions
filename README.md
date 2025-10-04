@@ -169,4 +169,3 @@ This repository contains solved Data Structures & Algorithms problems grouped by
 
 ---
 
-If you want a different layout (table, badges, or include short descriptions/excerpts from each file), tell me which style you prefer and I’ll update the README accordingly.
