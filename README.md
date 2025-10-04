@@ -1,6 +1,6 @@
 # DsaQuestions
 
-This repository contains solved Data Structures & Algorithms problems grouped by topic. Below each file is listed with a short, human-friendly topic name and a link to the solved file on GitHub (main branch).
+Solved DSA problems — organized by topic, with short titles and links to each solution on the main branch.
 
 ## 00warmUp
 
