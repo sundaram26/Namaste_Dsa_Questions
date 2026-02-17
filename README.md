@@ -166,6 +166,18 @@ Solved DSA problems — organized by topic, with short titles and links to each 
   - https://github.com/sundaram26/Namaste_Dsa_Questions/blob/main/06stackAndQueues/05validParentheses.js
 - Min Stack — `06stackAndQueues/06minStack.js`
   - https://github.com/sundaram26/Namaste_Dsa_Questions/blob/main/06stackAndQueues/06minStack.js
+- Remove Outermost Parentheses — `06stackAndQueues/07removeOutermostParentheses.js`
+  - https://github.com/sundaram26/Namaste_Dsa_Questions/blob/main/06stackAndQueues/07removeOutermostParentheses.js
+- Evaluate Reverse Polish Notation — `06stackAndQueues/08evaluateReversePolishNotation.js`
+  - https://github.com/sundaram26/Namaste_Dsa_Questions/blob/main/06stackAndQueues/08evaluateReversePolishNotation.js
+- Next Greater Element I — `06stackAndQueues/09nextGreaterElement.js`
+  - https://github.com/sundaram26/Namaste_Dsa_Questions/blob/main/06stackAndQueues/09nextGreaterElement.js
+- Daily Temperature — `06stackAndQueues/10dailyTemperature.js`
+  - https://github.com/sundaram26/Namaste_Dsa_Questions/blob/main/06stackAndQueues/10dailyTemperature.js
+- Next Greater Element II — `06stackAndQueues/11nextGreaterElementII.js`
+  - https://github.com/sundaram26/Namaste_Dsa_Questions/blob/main/06stackAndQueues/11nextGreaterElementII.js
+- Rotting Oranges — `06stackAndQueues/12rottingOranges.js`
+  - https://github.com/sundaram26/Namaste_Dsa_Questions/blob/main/06stackAndQueues/12rottingOranges.js
 
 ---
 
