@@ -11,6 +11,7 @@ function guess(num) {
     const multipier = 10 ** power;
     let pick = Math.round(Math.random() * multipier); 
     
+    
     if (pick > num) {
         pick = guess(num);
     }
